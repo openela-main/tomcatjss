@@ -6,7 +6,7 @@ Name:             tomcatjss
 
 # Upstream version number:
 %global           major_version 8
-%global           minor_version 3
+%global           minor_version 4
 %global           update_version 0
 
 # Downstream release number:
@@ -75,7 +75,7 @@ BuildRequires:    slf4j
 BuildRequires:    slf4j-jdk14
 
 # JSS
-BuildRequires:    jss = 5.3
+BuildRequires:    jss = 5.4
 
 # Tomcat
 %if 0%{?rhel} && ! 0%{?eln}
@@ -106,7 +106,7 @@ Requires:         slf4j
 Requires:         slf4j-jdk14
 
 # JSS
-Requires:         jss = 5.3
+Requires:         jss = 5.4
 
 # Tomcat
 %if 0%{?rhel} && ! 0%{?eln}
@@ -182,6 +182,9 @@ export JAVA_HOME=%{java_home}
 
 ################################################################################
 %changelog
+* Wed May 31 2023 Red Hat PKI Team <rhcs-maint@redhat.com> - 8.4.0-1
+- Rebase to Tomcat JSS 8.4.0
+
 * Fri Feb 10 2023 Red Hat PKI Team <rhcs-maint@redhat.com> - 8.3.0-1
 - Rebase to Tomcat JSS 8.3.0
 
